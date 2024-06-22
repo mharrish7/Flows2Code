@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
@@ -41,6 +41,11 @@ async def create_item(item: Item):
 
 app.include_router(home.router, prefix = "/api/home",tags=["Home"])
 app.include_router(tasks.router, prefix = "/api/tasks",tags=["Tasks"])
+
+@app.post("/gen")
+async def get_body(request: Request):
+    print(await request.json())
+    return await request.json()
 
 @app.get("/{rest_of_path:path}")
 def react_app(req: Request, rest_of_path: str):

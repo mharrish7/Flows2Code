@@ -1,0 +1,54 @@
+
+@keyframes fadein {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+  }
+
+.text-updater-node {
+    height: fit-content;
+    width: 15rem;
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;
+    animation: fadein 0.3s;
+}
+
+.text-updater-node textarea{
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: #373A40;
+}
+
+  
+.plus-icon{
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+
+.plus-icon:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.cross-icon{
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    background-size: 200% auto;
+    transition: 0.5s;
+    padding: 0;
+    margin: 0;
+}
+
+.cross-icon:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

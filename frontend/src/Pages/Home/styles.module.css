@@ -1,0 +1,79 @@
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.header h1{
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #373A40;
+    font-size: 4rem;
+}
+
+.header h1 p{
+    font-family: "Barlow", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #373A40;
+    font-size: 4rem;
+    display: inline;
+}
+
+
+.header span{
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    transition: 0.5s;
+}
+
+
+
+.header span:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.header p{
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #686D76;
+
+}
+
+         
+.btn {
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
+    margin: 10px;
+    cursor: pointer;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+  }
+
+.btn:hover {
+background-position: right center; /* change the direction of the change here */
+color: #fff;
+text-decoration: none;
+}
+ 
