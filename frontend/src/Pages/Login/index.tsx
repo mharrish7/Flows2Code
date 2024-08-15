@@ -5,25 +5,21 @@ import {
     Button,
     Title
   } from '@mantine/core';
-  import classes from './styles.module.css';
+  import styles from './styles.module.css';
   import {FC} from 'react';
+  import axios from 'axios';
 
   const Login :FC = () => {
+
+    const handleLogin = async() => {
+      let res = await axios.get("/api/login/google");
+      window.location.href = res.data.url;
+    }
+
     return (
-      <div className={classes.wrapper}>
-        <Paper className={classes.form} radius={0} p={30}>
-          <Title order={2} className={classes.title} ta="center" mt="md" mb={50}>
-            LOGIN
-          </Title>
-  
-          <TextInput label="Username" placeholder="Your Username" size="md" />
-          <PasswordInput label="Password" placeholder="Your password" mt="md" size="md" />
-          <Button fullWidth mt="xl" size="md">
-            Login
-          </Button>
-  
-          
-        </Paper>
+      <div style={{display : "flex", alignItems : "center", justifyContent : "center", height : "80vh"}}>
+              <button className={styles.btn} onClick={() => {handleLogin();}}>Login with Google</button>
+
       </div>
     );
   }

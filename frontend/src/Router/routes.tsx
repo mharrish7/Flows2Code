@@ -1,4 +1,4 @@
-import {Home, TrackBoard, FlowChart} from "@pages";
+import {Home, TrackBoard, FlowChart,Login} from "@pages";
 
 const routes: Routes[] = [
   {
@@ -18,6 +18,12 @@ const routes: Routes[] = [
     path: "/flow",
     description: "flowchart",
     element: <FlowChart />,
+  },
+  {
+    title: "login",
+    path: "/login",
+    description: "Login",
+    element: <Login />,
   },
 ];
 

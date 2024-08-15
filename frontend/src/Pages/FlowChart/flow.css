@@ -27,15 +27,51 @@
 
   
 .plus-icon{
-    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%);
-    background-size: 200% auto;
-    transition: 0.5s;
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%) !important;
+    background-size: 200% auto !important;
+    transition: 0.5s !important;
+    margin-top: 1rem !important;
 }
 
 .plus-icon:hover {
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
+    background-position: right center !important; /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.code-btn{
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%) !important;
+    background-size: 200% auto !important;
+    transition: 0.5s !important;
+    margin-top: 1rem !important;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.code-btn:hover {
+    background-position: right center !important; /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none !important;
+}
+
+.gen-btn{
+    background-image: linear-gradient(to right, #FF512F 0%, #F09819  51%, #FF512F  100%) !important;
+    background-size: 200% auto !important;
+    transition: 0.5s !important;
+    margin-top: 1rem !important;
+    border: none;
+    padding: 0.3rem 5rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.gen-btn:hover {
+    background-position: right center !important; /* change the direction of the change here */
+    color: #fff !important;
+    text-decoration: none !important;
 }
 
 
