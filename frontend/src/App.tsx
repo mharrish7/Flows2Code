@@ -1,9 +1,10 @@
 import { MantineProvider } from "@mantine/core";
 import Router from "@router";
+import '@mantine/core/styles.css';
 
 function App() {
   return (
-    <MantineProvider withNormalizeCSS >
+    <MantineProvider >
       <Router />
     </MantineProvider>
   );

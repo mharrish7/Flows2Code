@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Home:FC = () => {
     const [ping, setPing] = useState("");
+    const [count,setCount] = useState(0);
     const navigate = useNavigate();
 
     const getPing = async() => {
@@ -14,8 +15,14 @@ const Home:FC = () => {
         setPing(res.data.ping);
     }
 
+    const getCount = async() => {
+      let res = await axios.get("/api/count");
+      setCount(res.data.count);
+  }
+
     useEffect(() => {
         getPing();
+        getCount();
     },[])
 
     const text = "Flows".split("");
@@ -65,7 +72,8 @@ const Home:FC = () => {
         </motion.p>
       ))}</motion.h1>
                 <p>Convert your high-level design flow into code efficiently and quickly.</p>
-                <button onClick={() => {navigate('/flow')}} className={styles.btn}>Start Now!</button>
+                <button onClick={() => {window.location.href = "/flow"}} className={styles.btn}>Start Now!</button>
+                <p style={{position : "absolute", bottom : "1rem", left : "0rem"}}>No of generations : <span>{count}</span></p>
                 </div>
              </motion.div>
         </>
